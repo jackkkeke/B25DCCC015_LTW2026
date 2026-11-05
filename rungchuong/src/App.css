@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 2px;
+}
+
+.main-content {
+  padding: 10px 0;
+}
+
+.question-table th, .question-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.question-table th {
+  background-color: #f2f2f2;
+}
