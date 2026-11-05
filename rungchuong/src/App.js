@@ -43,18 +43,12 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="play" element={<Play />} />
+        <Route index element={<Home playerName={playerName} setPlayerName={setPlayerName} />} />
+        <Route path="play" element={<Play questions={questions} playerName={playerName} />} />
         <Route path="result" element={<Result />} />
         <Route path="history" element={<History />} />
-        <Route
-          path="questions"
-          element={<QuestionBank questions={questions} />}
-        />
-        <Route
-          path="questions/:id"
-          element={<QuestionDetail questions={questions} />}
-        />
+        <Route path="questions" element={<QuestionBank questions={questions} />} />
+        <Route path="questions/:id" element={<QuestionDetail questions={questions} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
