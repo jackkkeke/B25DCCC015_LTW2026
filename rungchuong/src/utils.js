@@ -1,8 +1,9 @@
-export const calcScore = (answers) => {
-  // Hàm tính điểm dựa trên danh sách câu trả lời của bạn
-  return answers.reduce((total, ans) => total + (ans.isCorrect ? 10 : 0), 0);
-};
+import { POINTS, RANKS } from './data';
 
-export const getRank = (score) => {
-  return "Tốt";
-};
+export const calcScore = (answers) =>
+  answers
+    .filter((answer) => answer.correct)
+    .reduce((total, answer) => total + POINTS[answer.level], 0);
+
+export const getRank = (score) =>
+  RANKS.find((rank) => score >= rank.min)?.title ?? 'Cần cố gắng';

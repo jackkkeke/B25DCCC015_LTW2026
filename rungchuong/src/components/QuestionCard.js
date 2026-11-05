@@ -2,7 +2,7 @@ import React from 'react';
 import { LEVELS } from '../data';
 import { AnswerButton } from './AnswerButton';
 
-export const QuestionCard = ({ question, currentIndex, selectedAnswer, correctAnswer, status, onSelect }) => {
+export const QuestionCard = ({ question, currentIndex, hiddenOptions, selectedAnswer, correctAnswer, status, onSelect }) => {
   return (
     <div className="question-card">
       <h3>
@@ -15,6 +15,7 @@ export const QuestionCard = ({ question, currentIndex, selectedAnswer, correctAn
             key={idx}
             index={idx}
             text={opt}
+            hidden={hiddenOptions.includes(idx)}
             selectedAnswer={selectedAnswer}
             correctAnswer={correctAnswer}
             status={status}
